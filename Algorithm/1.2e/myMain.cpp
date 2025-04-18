@@ -53,7 +53,7 @@ public:
         }
         return x;
     }
-    // // 合并
+    // // 合并,此题不打算用
     // void unite(int x, int y)
     // {
     //     int rootX = find(x);
@@ -75,11 +75,11 @@ public:
     //         }
     //     }
     // }
-    // 判断两个元素是否在同一集合
-    bool isConnected(int x, int y)
-    {
-        return find(x) == find(y);
-    }
+    // // 判断两个元素是否在同一集合，此题无用
+    // bool isConnected(int x, int y)
+    // {
+    //     return find(x) == find(y);
+    // }
 };
 
 void input()
@@ -128,4 +128,5 @@ int main()
 
 //Q*1:极大问题：对于代码逻辑完全无误，而最后一个样例点始终报段错误的原因
 //A*1:已查明：来源：cmp函数中的比较使用了 ">="而不是">"
-//这道题无排序稳定性要求，此
+//这道题无排序稳定性要求，由https://blog.csdn.net/Strengthennn/article/details/107738011指出
+//当用sort给大量数据排序时若使用自定义的cmp比较函数， 则必须注意弱序规则，即尽可能使用">"/"<"而不是">="/"<="
